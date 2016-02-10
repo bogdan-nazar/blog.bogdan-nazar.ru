@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'HeliosUltraCompressed';
+    src: url('{$modTplDir}fonts/helios/helios-ultra-compressed.eot');
+    src: url('{$modTplDir}fonts/helios/helios-ultra-compressed.eot?#iefix') format('embedded-opentype'),
+         url('{$modTplDir}fonts/helios/helios-ultra-compressed.ttf') format('truetype');
+}
+* {
+	color:#444;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	background:url('{$modTplDir}images/bg.jpg') center no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+}
+input[type="text"], input[type="password"], select {
+	border:1px solid #ccc;
+	padding:2px;
+	margin:0;
+	outline:0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+}
+#render-main {
+	background-color:#fff;
+	-moz-opacity:0.9;
+	-khtml-opacity:0.9;
+	opacity:0.9;
+	-moz-box-shadow: 0 0 20px #fff;
+	-webkit-box-shadow: 0 0 20px #fff;
+	box-shadow: 0 0 20px #fff;
+}
+#render-center {
+	padding:0 10px;
+}
+#render-main {
+	width:1000px;
+}
+#render-header {
+	width:1000px;
+}
+#render-center-mid {
+	padding:0;
+}
+#render-footer {
+	width:100%;
+	height:260px;
+	margin-top:-260px;
+}
+.content h1.title {
+	padding:8px 0 15px 0;
+	margin:0;
+	border-top:2px solid #2f3336;
+	color:#333;
+	font-family:'HeliosUltraCompressed';
+	font-size:24px;
+	font-weight:normal;
+	text-transform:uppercase;
+}

@@ -1,0 +1,29 @@
+AddDefaultCharset utf-8
+php_flag short_open_tag on
+php_flag display_errors on
+php_value error_reporting E_ALL
+RewriteEngine On
+Options +FollowSymLinks
+Options -Indexes
+
+# RewriteRule ^pma\/$ /pma/index.php [L]
+# excluding phpBB
+# RewriteRule ^forum  - [L]
+
+RewriteCond %{REQUEST_URI} /index\.(php|htm|html)\.
+RewriteRule .* - [L,F]
+RewriteCond %{REQUEST_FILENAME} \.tpl
+RewriteRule .* - [L,F]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ (.*)/index\.(php|htm|html)(.*)\ HTTP/
+RewriteRule ^(.*)index\.(php|htm|html)$ %{REQUEST_URI}?%{QUERY_STRING}
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ (.*)/index\.(php|htm|html)(.*)\ HTTP/
+RewriteRule ^(.*)/index\.(php|htm|html)$ $1/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(gif|jpg|png|jpeg|tif|tiff|bmp|js|json|map|css|pdf|doc|xls|ppt|htm|html|htc|pl|txt|ico|ttf|woff|eot|otf|mp4|ogg|webm|flv|mp3|wav) [NC]
+RewriteRule ^(.*)$ ?path=$1 [QSA,L]
+
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType application/font-woff .woff
+AddType application/vnd.ms-fontobject .eot

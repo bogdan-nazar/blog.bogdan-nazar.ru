@@ -1,0 +1,9 @@
+.header .main {
+	height:150px;
+	margin-bottom:10px;
+	background:url('{$modTplDir}images/header.jpg') left top no-repeat;
+}
+.header .main .cont {
+	padding-left:10px;
+	background:url('{$modTplDir}images/moto.png') 220px 10px no-repeat;
+}
