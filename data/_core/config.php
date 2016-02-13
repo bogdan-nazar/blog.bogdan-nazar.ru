@@ -20,8 +20,8 @@ $global_cfg=array(
 	),
 	"db"=>array(
 		"con_host"			=>	"localhost",
-		"con_name"			=>	"itechserv_demigods",
-		"con_user"			=>	"itechserv",
+		"con_name"			=>	"priv_blog",
+		"con_user"			=>	"root",
 		"con_pass"			=>	"snkMERoa",
 		"dev_host"			=>	"localhost",
 		"dev_name"			=>	"itechserv_demigods",
